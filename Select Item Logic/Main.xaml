@@ -1,0 +1,169 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="789.333333333333,764.333333333333" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="25">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="34">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="799.333333333333,739.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="getelement" />
+      <Variable x:TypeArguments="x:String" Default="FNOL" Name="ListSelect" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:FindChildren Children="[getelement]" DisplayName="Find Children 'SELECT'" Filter="&lt;webctrl /&gt;" sap:VirtualizedContainerService.HintSize="757.333333333333,106" sap2010:WorkflowViewState.IdRef="FindChildren_1" Scope="FIND_CHILDREN">
+      <ui:FindChildren.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9da9d142-8dca-4fd2-9e3d-6ea37bbaa983" InformativeScreenshot="344e718ba019e564200a7ee6cd4c7425" Selector="&lt;html app='chrome.exe' title='Guidewire ClaimCenter*' /&gt;&lt;webctrl name='NewActivity-NewActivityScreen-NewActivityDV-Activity_AssignActiv*' tag='SELECT' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:FindChildren.Target>
+    </ui:FindChildren>
+    <ui:ForEach x:TypeArguments="ui:UiElement" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="757.333333333333,501.333333333333" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[getelement]">
+      <ui:ForEach.Body>
+        <ActivityAction x:TypeArguments="ui:UiElement">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:UiElement" Name="item" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="720.666666666667,362.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="getvalue" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Assign sap:VirtualizedContainerService.HintSize="678.666666666667,62" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[getvalue]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[item.Selector.ToString]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Switch x:TypeArguments="x:Boolean" DisplayName="Switch" Expression="[System.Text.RegularExpressions.Regex.Match( getvalue, &quot;(?&lt;=aaname=').*(?=' tag)&quot;).Value.Contains(ListSelect)]" sap:VirtualizedContainerService.HintSize="678.666666666667,168.666666666667" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+              <Sequence x:Key="True" sap:VirtualizedContainerService.HintSize="400.666666666667,627.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+                <Sequence.Variables>
+                  <Variable x:TypeArguments="x:String" Name="valuedata" />
+                </Sequence.Variables>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:LogMessage sap:VirtualizedContainerService.HintSize="358.666666666667,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;matched&quot;]" />
+                <Assign sap:VirtualizedContainerService.HintSize="358.666666666667,62" sap2010:WorkflowViewState.IdRef="Assign_2">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:String">[valuedata]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match( getvalue, "(?&lt;=aaname=').*(?=' tag)").ToString]</InArgument>
+                  </Assign.Value>
+                </Assign>
+                <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'SELECT'" sap:VirtualizedContainerService.HintSize="358.666666666667,134" sap2010:WorkflowViewState.IdRef="SelectItem_1" Item="[valuedata]">
+                  <ui:SelectItem.Items>
+                    <scg:List x:TypeArguments="x:String" Capacity="32">
+                      <x:String>Use automated assignment</x:String>
+                      <x:String>Claim/Exposure Owner</x:String>
+                      <x:String>Your Claims Team. (Robots)</x:String>
+                      <x:String>Nichole Dennis (Auto - L3 Team 1)</x:String>
+                      <x:String>Mudumango Lee (Auto - L3 Team 1)</x:String>
+                      <x:String>Isis Russell (DV Negotiator)</x:String>
+                      <x:String>Mark Jenkins (Payment Queue)</x:String>
+                      <x:String>Jesus Cavazos (Auto - L3 Team 1)</x:String>
+                      <x:String>Diane Grizzard (Appraisers VA/MD)</x:String>
+                      <x:String>Jason Murphy (Auto - L2 Team 4)</x:String>
+                      <x:String>Adrian Rivas (Total Loss)</x:String>
+                      <x:String>Anthony Gallo (CRS Repairs)</x:String>
+                      <x:String>Dalton Conaway (Auto - L2 Team 4)</x:String>
+                      <x:String>Meaghan Given (Halifax) (Payment Queue)</x:String>
+                      <x:String>Lorri Brown (Total Loss)</x:String>
+                      <x:String>Andrew Harrill (Claims Support)</x:String>
+                      <x:String>FNOL - Robots</x:String>
+                      <x:String>FNOL - Elephant Insurance</x:String>
+                    </scg:List>
+                  </ui:SelectItem.Items>
+                  <ui:SelectItem.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a2391fe8-7bf0-4a0e-8ca4-f221c77bcff9" InformativeScreenshot="b6732b61d1424101b981eddc643fd87b" Selector="&lt;html app='chrome.exe' title='Guidewire ClaimCenter*' /&gt;&lt;webctrl tag='SELECT' parentid='NewActivity-NewActivityScreen-NewActivityDV-Activity_AssignActivity' /&gt;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:SelectItem.Target>
+                </ui:SelectItem>
+                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="358.666666666667,62.6666666666667" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[getvalue]" />
+                <ui:Break sap:VirtualizedContainerService.HintSize="358.666666666667,22" sap2010:WorkflowViewState.IdRef="Break_1" />
+              </Sequence>
+              <ui:LogMessage x:Key="False" sap:VirtualizedContainerService.HintSize="334,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;unmatched&quot;]" />
+            </Switch>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEach.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:ForEach>
+  </Sequence>
+</Activity>
