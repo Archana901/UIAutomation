@@ -1,0 +1,20 @@
+﻿<html><body><table border=1>
+<tr>
+<th>IssueDate</th>
+<th>PayeeFullName</th>
+<th>ClaimNumber</th>
+<th>CheckAmount</th>
+<th>NameOnExposure</th>
+<th>Memo</th>
+<th>CopartLotNum</th>
+</tr>
+<tr>
+<td>06/07/2021 00:00:00</td>
+<td>Walker Auto Body & Frame Inc</td>
+<td>2021-00308865</td>
+<td>1062.33</td>
+<td>Johnneice Cobb</td>
+<td>Ded $500 2015 GMC Terrain SLE1 AWD</td>
+<td></td>
+</tr>
+</table></body></html>
